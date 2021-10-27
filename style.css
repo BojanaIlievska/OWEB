@@ -1,0 +1,182 @@
+*
+{
+  margin: 0;
+  padding: 0;
+}
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.nav li 
+{
+  float: left;
+}
+.nav a 
+{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 26px 28px;
+  text-decoration: none;
+}
+.nav a:hover 
+{
+  background-color: grey;
+}
+.specialsec
+{
+    background-color:rgb(253, 214, 85) ;
+    background-size: cover;
+    padding:20px;
+    margin-top: 30px;
+    height: 450px;
+    color: whitesmoke;
+
+}
+.heading1
+{
+    font-family: 'Amatic SC', cursive;
+    text-align: center;
+    padding-top: 40px;
+    font-size: 60pt;
+}
+
+.heading2
+{
+    font-size: 22pt;
+    margin-left: 20px;
+}
+.p2
+{
+    font-size: 19pt;
+    margin-top: 0;
+    margin-left: 20px ;
+}
+#container1
+{
+  width: 500px; 
+  margin: 0 auto;
+  
+  }
+  div.img {
+      margin: 5px;
+      padding: 5px;
+      border: 1px solid #0000ff;
+      height: auto;
+      width: auto ;
+      float: left;
+      text-align: center;
+  }   
+  
+  div.img img {
+      display: inline;
+      margin: 5px;
+      border: 1px solid #ffffff;
+  }
+  
+  div.img a:hover img {
+      border: 1px solid #0000ff;
+  }
+  
+  div.desc {
+    text-align: center;
+    font-weight: normal;
+    width: 120px;
+    margin: 5px;
+  }
+  .section1
+  {
+     background-color: black;
+     margin-top: 0px;
+     margin-bottom: 0px;
+     padding: 0px 0px;
+     color:whitesmoke
+  }
+.section1-heading
+{
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.section1-p
+{
+  padding: 14px 16px;
+}
+.column {
+  float: left;
+  width: 10%;
+  padding: 5px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  padding-top: 0;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color:orangered;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #455da0;
+}
+
+#surveyform {
+  border-radius: 5px;
+  background-color: rgb(253, 214, 85);
+  padding: 20px;
+  margin: 20px auto;
+  margin-bottom: 0px;
+  width: 320px;
+  text-align: center;
+}
+.divfave
+{
+  max-width: 800px;
+  margin-left: 200px;
+  margin-right: 200px;
+  align-items: center;
+  justify-content: center;
+}
+
+.divfave .floating-image.right
+{
+  float: right;
+  margin-left: 30px;
+  margin-bottom: 5px;
+  width: 250px;
+  height: 300px;
+}
+.divfave .floating-image.left
+{
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 5px;
+  width: 250px;
+  height: 300px;
+}
+
+
+
