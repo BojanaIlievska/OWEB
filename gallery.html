@@ -1,0 +1,342 @@
+<!DOCTYPE html> 
+  <html lang="en">
+     <head>
+       <meta charset="UTF-8">
+       <title>HOME</title>
+       <link rel = "stylesheet" type = "text/css"
+       href = "styless.css">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    </head>
+     <body style="background-image: linear-gradient(rgba(255, 255, 255, 0.2),
+     rgba(255, 255, 255, 0.3)), url(backgroundcoffee.jpg); background-size: cover;">
+      <nav class="nav">
+         <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="favethings.html">FaveThings</a></li>
+            <li><a href="gallery.html" class="active">Galery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </nav>
+      <section>
+      <h1 class="galleryheading">Some pictures you may like</h1><br><br>
+      
+      <div class="gallery">
+       <div class="gallerypictures">
+         <img src="coffee6.jpg"  width="350" height="400" style="margin-left: 50px;" ><br>
+         <button id="button1" class="button" onclick="addToNumber()" >Like</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="button" id="buttonn5" onclick="Dislikes6()">Dislike</button>
+         <p id="p1" style="font-size:21px; margin-top: 10px; letter-spacing: 2px;"></p>
+         <p style="font-size: 21px;margin-top: 10px; margin-left: 20px;">Comment:</p>
+        <textarea rows="3" cols="40" name="comment" id="comment6">
+          Enter text here...</textarea>
+          <input type="button" value="Reset Comment" style="font-size: 15px; float:left;" onclick="document.getElementById('comment6').value=''">
+          <input type="button" value="Comment" style="font-size: 15px; float:right;" onclick="Komentiraj()"><br><br>
+          <p style="font-size: 21px;margin-top: 10px; ">All Comments:</p>
+          <p><textarea readonly id="komentari"></textarea></p>
+         </div>
+
+       <div class="gallerypictures">
+        <img src="coffee1.jpg"  width="350" height="400"><br>
+        <button class="button" id="button2" onclick="Likes()" >Like</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="button" id="buttonn4" onclick="Dislikes5()"> Dislike</button>
+        <p id="p2" style="font-size:21px; margin-top: 10px; letter-spacing: 2px;"></p>
+        <p style="font-size: 21px;margin-top: 10px;float: left; margin-left: 30px;">Comment:</p>
+        <textarea rows="3" cols="30" name="comment" id="comment4">
+          Enter text here...</textarea>
+          <input type="button" value="Reset Comment" style="font-size: 15px; float:left;" onclick="document.getElementById('comment4').value=''">
+          <input type="button" value="Comment" style="font-size: 15px; float:right;" onclick="Komentiraj1()"><br><br>
+          <p style="font-size: 21px;margin-top: 10px; ">All Comments:</p>
+          <p><textarea readonly id="komentari1"></textarea></p>
+      </div>
+
+      <div class="gallerypictures">
+        <img src="coffee2.jpg"  width="350" height="400"><br>
+        <button class="button" id="button3" onclick="Likess()" >Like</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="button" id="buttonn3" onclick="Dislikes4()">Dislike</button>
+        <p id="p3" style="font-size:21px; margin-top: 10px; letter-spacing: 2px;"></p>
+        <p style="font-size: 21px;margin-top: 10px;float: left; margin-left: 30px;">Comment:</p>
+        <textarea rows="3" cols="30" name="comment" id="comment3">
+          Enter text here...</textarea>
+          <input type="button" value="Reset Comment" style="font-size: 15px; float:left;" onclick="document.getElementById('comment3').value=''">
+          <input type="button" value="Comment" style="font-size: 15px; float:right;" onclick="Komentiraj2()"><br><br>
+          <p style="font-size: 21px;margin-top: 10px; ">All Comments:</p>
+          <p><textarea readonly id="komentari2"></textarea></p>
+      </div>
+
+      <div class="gallerypictures">
+        <img src="coffee3.jpg"  width="350" height="400"><br>
+        <button class="button" id="button4" onclick="Likes2()">Like</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="button" class="button" id="buttonn2" onclick="Dislikes3()">Dislike</button>
+        <p id="p4" style="font-size:21px; margin-top: 10px; letter-spacing: 2px;"></p>
+        <p style="font-size: 21px;margin-top: 10px;float: left; margin-left: 30px;">Comment:</p>
+        <textarea rows="3" cols="30" name="comment" id="comment2">
+          Enter text here...</textarea>
+          <input type="button" value="Reset Comment" style="font-size: 15px; float:left;" onclick="document.getElementById('comment2').value=''">
+          <input type="button" value="Comment" style="font-size: 15px; float:right;" onclick="Komentiraj3()"><br><br>
+          <p style="font-size: 21px;margin-top: 10px; ">All Comments:</p>
+          <p><textarea readonly id="komentari3"></textarea></p>
+      </div>
+
+      <div class="gallerypictures">
+        <img src="coffee4.jpg"  width="350" height="400"><br>
+        <button class="button" id="button5" onclick="Likes3()">Like</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="button" id="buttonn1" onclick="Dislikes2()">Dislike</button>
+        <p id="p5" style="font-size:21px; margin-top: 10px; letter-spacing: 2px;"></p>
+        <p style="font-size: 21px;margin-top: 10px;float: left; margin-left: 30px;">Comment:</p>
+        <textarea rows="3" cols="30" name="comment" id="comment1">
+          Enter text here...</textarea>
+          <input type="button" value="Reset Comment" style="font-size: 15px; float:left;" onclick="document.getElementById('comment1').value=''">
+          <input type="button" value="Comment" style="font-size: 15px; float:right;" onclick="Komentiraj4()"><br><br>
+          <p style="font-size: 21px;margin-top: 10px; ">All Comments:</p>
+          <p><textarea readonly id="komentari4"></textarea></p>
+    
+      </div>
+      <div class="gallerypictures">
+        <img src="coffee5.png" width="350" height="400"><br>
+        <button class="button" id="button5" onclick="Likes4()">Like</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="button" id="buttonn" onclick="Dislikes1()">Dislike</button>
+        <p id="p6" style="font-size:21px; margin-top: 10px; letter-spacing: 2px;"></p>
+        <p style="font-size: 21px;margin-top: 10px;float: left; margin-left: 30px;">Comment:</p>
+        <textarea rows="3" cols="30" name="comment" id="comment">
+          Enter text here...</textarea>
+          <input type="button" value="Reset Comment" style="font-size: 15px; float:left;"onclick="reset()">
+          <input type="button" value="Comment" style="font-size: 15px; float:right;" onclick="Komentiraj5()"><br><br>
+          <p style="font-size: 21px;margin-top: 10px; ">All Comments:</p>
+          <p><textarea readonly id="komentari5"></textarea></p>
+      </div>
+      </div>
+</section>
+      <script>
+         var myButton = document.getElementById("button1");
+         var myOutut= document.getElementById("p1")
+         var startNumber=0;
+
+         function addToNumber()
+         {
+           startNumber++
+           myOutut.innerHTML = 'Likes:'+startNumber;
+         }
+        //
+         var Button = document.getElementById("button2");
+         var Output= document.getElementById("p2")
+         var Number=0;
+      
+
+         function Likes ()
+         {
+          Number++
+          Output.innerHTML='Likes:'+Number 
+         }
+         
+         //
+         var Button1 = document.getElementById("button3");
+         var Output1= document.getElementById("p3")
+         var Number1=0;
+      
+
+         function Likess ()
+         {
+          Number1++
+          Output1.innerHTML='Likes:'+Number1 
+         }
+        //
+
+         var Button2 = document.getElementById("button4");
+         var Output2= document.getElementById("p4")
+         var Number2=0;
+      
+
+         function Likes2 ()
+         {
+          Number2++
+          Output2.innerHTML='Likes:'+Number2 
+         }
+         //
+
+
+         var Button3 = document.getElementById("button5");
+         var Output3= document.getElementById("p5")
+         var Number3=10;
+      
+
+         function Likes3 ()
+         {
+          Number3++
+          Output3.innerHTML='Likes:'+Number3 
+         }
+         //
+
+         var Button4 = document.getElementById("button6");
+         var Output4= document.getElementById("p6")
+         var Number4=0;
+      
+
+         function Likes4 ()
+         {
+          Number4++
+          Output4.innerHTML='Likes:'+Number4
+         }
+        //dislikes start
+        var kopce1 = document.getElementById("buttonn");
+         var izlez1= document.getElementById("p6");
+      
+
+         function Dislikes1 ()
+         {
+          Number4--
+          izlez1.innerHTML='Likes:'+Number4
+         }
+         //
+
+         var kopce2 = document.getElementById("buttonn1");
+         var izlez2= document.getElementById("p5");
+      
+
+         function Dislikes2 ()
+         {
+          Number3--
+          izlez2.innerHTML='Likes:'+Number3
+         }
+         //
+
+         var kopce3 = document.getElementById("buttonn2");
+         var izlez3= document.getElementById("p4");
+      
+
+         function Dislikes3 ()
+         {
+          Number2--
+          izlez3.innerHTML='Likes:'+Number2
+         }
+         //
+         var kopce4 = document.getElementById("buttonn3");
+         var izlez4= document.getElementById("p3");
+      
+
+         function Dislikes4 ()
+         {
+          Number1--
+          izlez4.innerHTML='Likes:'+Number1
+         }
+         //
+         var kopce5 = document.getElementById("buttonn4");
+         var izlez5= document.getElementById("p2");
+      
+
+         function Dislikes5 ()
+         {
+          Number--
+          izlez5.innerHTML='Likes:'+Number
+         }
+        //
+        var kopce6 = document.getElementById("buttonn5");
+         var izlez6= document.getElementById("p1");
+      
+
+         function Dislikes6 ()
+         {
+          startNumber--
+          izlez6.innerHTML='Likes:'+startNumber
+         }
+
+         function reset ()
+            {
+              document.getElementById("comment").value='';
+            }
+
+            function reset1 ()
+            {
+              document.getElementById("comment1").value='';
+            }
+          //komentiraj
+
+
+        function Komentiraj()
+          {
+        var dosegasnikomentari=document.getElementById("komentari").value
+        var tekst=document.getElementById("comment6").value
+        if (dosegasnikomentari!='')
+        {
+          document.getElementById("komentari").innerHTML=dosegasnikomentari+("\n" + tekst)
+        }
+        else
+        {
+          document.getElementById("komentari").innerHTML=dosegasnikomentari+(tekst)
+        }
+       }
+       //
+
+       
+       function Komentiraj1()
+          {
+        var dosegasnikomentari1=document.getElementById("komentari1").value
+        var tekst1=document.getElementById("comment4").value
+        if (dosegasnikomentari1!='')
+        {
+          document.getElementById("komentari1").innerHTML=dosegasnikomentari1+("\n" + tekst1)
+        }
+        else
+        {
+          document.getElementById("komentari1").innerHTML=dosegasnikomentari1+(tekst1)
+        }
+       }
+      //
+
+      function Komentiraj2()
+          {
+        var dosegasnikomentari2=document.getElementById("komentari2").value
+        var tekst2=document.getElementById("comment3").value
+        if (dosegasnikomentari2!='')
+        {
+          document.getElementById("komentari2").innerHTML=dosegasnikomentari2+("\n" + tekst2)
+        }
+        else
+        {
+          document.getElementById("komentari2").innerHTML=dosegasnikomentari2+(tekst2)
+        }
+       }
+        
+        //
+       function Komentiraj3()
+          {
+        var dosegasnikomentari3=document.getElementById("komentari3").value
+        var tekst3=document.getElementById("comment2").value
+        if (dosegasnikomentari3!='')
+        {
+          document.getElementById("komentari3").innerHTML=dosegasnikomentari3+("\n" + tekst3)
+        }
+        else
+        {
+          document.getElementById("komentari3").innerHTML=dosegasnikomentari3+(tekst3)
+        }
+       }
+       //
+
+       function Komentiraj4()
+          {
+        var dosegasnikomentari4=document.getElementById("komentari4").value
+        var tekst4=document.getElementById("comment1").value
+        if (dosegasnikomentari4!='')
+        {
+          document.getElementById("komentari4").innerHTML=dosegasnikomentari4+("\n" + tekst4)
+        }
+        else
+        {
+          document.getElementById("komentari4").innerHTML=dosegasnikomentari4+(tekst4)
+        }
+       }
+       //
+
+       function Komentiraj5()
+          {
+        var dosegasnikomentari5=document.getElementById("komentari5").value
+        var tekst5=document.getElementById("comment").value
+        if (dosegasnikomentari5!='')
+        {
+          document.getElementById("komentari5").innerHTML=dosegasnikomentari5+("\n" + tekst5)
+        }
+        else
+        {
+          document.getElementById("komentari5").innerHTML=dosegasnikomentari5+(tekst5)
+        }
+       }
+      </script>
+
+      </body>
