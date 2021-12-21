@@ -5,6 +5,7 @@
        <title>HOME</title>
        <link rel = "stylesheet" type = "text/css"
         href = "styless.css">
+        <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
        <link rel="preconnect" href="https://fonts.googleapis.com">
        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
@@ -133,11 +134,65 @@
               </div>
           </div>
           </div>
+          <a href="#" class="scrolltotop"><span><img src="topbutton.png" width="70px" height="70px"></span></a>
         </section>
-      
+        
+        <section style="text-align: center; margin-top: 30px; height: 1000px;">
+          <h1 style="font-size: 3.3rem;">Add another blog</h1><br>
+          <p style="font-size: 2.4rem;">If u have some beautifull place to recommend us to visit u can write some text here </p>
+          <form style="padding-left: 400px; padding-right: 400px; margin-top: 30px;">
+            <label for="fname" ></label>
+            <input type="text" id="title"  placeholder="Title..">
+
+            <label for="subject"></label>
+            <textarea name="subject" placeholder="Subject" style="height:200px" id="text"></textarea>
+            <input type="button" style="padding: 8px 10px; border: 2px solid rgb(12, 231, 247); font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 2px;" value="Add blog" id="addblog">
+            </form>
+          <div id="addedtext" style="font-size: 22px; float: left; margin-top: 30px; margin-left: 160px; margin-right:20px; padding:20px; text-align: justify;">
+            
+          </div>
+          
+        </section>
 
 
         <script>
+        function start()
+        {
+          var blogovi=document.getElementById("addedtext").innerHTML=localStorage.getItem("newblog");
+          var startbutton =document.getElementById("addblog");
+          addblog.addEventListener( "click", insert, false ); 
+        }
+        
+         window.addEventListener ("load", start, false);
+        function insert ()
+        {
+         
+          var h=document.getElementById("title").value;
+          var t=document.getElementById("text").value;
+          var nov = "<br>" +"<br>"+ "<div>" + "<h1>" + h + "</h1>" + "<br>" +"</br>" + "<p>" + t + "</p>";
+          var siteB=localStorage.getItem("newblog");
+
+          if(siteB==null)
+          {
+            localStorage.setItem("newblog", nov);
+            var doc = document.getElementById("addedtext").innerHTML=localStorage.getItem("newblog");
+          }
+          else
+          {
+            siteB+=nov;
+            localStorage.setItem("newblog",siteB)
+            var doc=document.getElementById("addedtext").innerHTML=localStorage.getItem("newblog");
+          }
+          
+         
+        }
+            </script>
+            <script>
+          
+
+
           function myFunction() 
           {
          var dots = document.getElementById("dots");
@@ -243,5 +298,25 @@ function my2()
         moreText.style.display = "inline";
        }
       }
-        </script>
-        </body>
+      
+      $(document).ready(function(){
+	
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 100) 
+		{
+			$('.scrolltotop').fadeIn();
+		} 
+		else 
+		{
+			$('.scrolltotop').fadeOut();
+		}
+	});
+	
+
+	$('.scrolltotop').click(function(){
+		$('html, body').animate({scrollTop : 0},700);
+		return false;
+	});
+	
+});
+  </script>

@@ -136,56 +136,43 @@
   }
   
   
- .progress
- {
-     margin-bottom: 10rem;
-    
- }
-  
-  .progress-bar {
-    width: 60rem;
-    height: 3.5rem;
-    background-color: rgb(8, 8, 8);
-    margin: 1.5rem 0;
-    border-radius: 0.4rem;
-    box-shadow: 0.2rem 0.2rem 1rem #555;
-    position: relative;
+  .progress
+  {
+      margin-bottom: 10rem;
+     
   }
-  
-  .text {
-    position: absolute;
-    left: 1rem;
-    font-size: 1.5rem;
-    color: #fff;
-  }
-  
-  .progress-text span {
-    margin: 0 0.5rem;
-    font-size: 1.8rem;
-    font-weight: 700;
-  }
-  .percent2 {
-    width: 65%;
-    height: 100%;
-    background-color:#1cabe4;
-    border-radius: 0.3rem;
-    transition: width 0.5s 0.5s ease-in-out;
-  }
-  .percent1 {
-    width: 70%;
-    height: 100%;
-    background-color:#1cabe4;
-    border-radius: 0.3rem;
-    transition: width 0.5s 0.5s ease-in-out;
-  }
-  .percent {
-    width: 40%;
-    height: 100%;
-    background-color:#1cabe4;
-    border-radius: 0.3rem;
-    transition: width 0.5s 0.5s ease-in-out;
-  }
- 
+   
+   .progress-bar {
+     width: 60rem;
+     height: 5.0rem;
+     background-color: rgb(8, 8, 8);
+     margin: 2.0rem 0;
+     border-radius: 0.4rem;
+     box-shadow: 0.2rem 0.2rem 1rem #555;
+     position: relative;
+   }
+   
+   .text {
+     position: absolute;
+     left: 1rem;
+     font-size: 1.5rem;
+     color: #fff;
+   }
+   
+   .progress-text span {
+     margin: 0 0.5rem;
+     font-size: 1.8rem;
+     font-weight: 700;
+   }
+   
+   
+   .percent {
+     width: 0%;
+     height: 100%;
+     background-color:#1cabe4;
+     border-radius: 0.3rem;
+     transition: width 5s 0.5s ease-in-out;
+   }
 
   /* end of home*/
 
@@ -492,6 +479,14 @@
 {
   display: none;
 }
+.scrolltotop{
+  
+  position:fixed;
 
+  bottom: 30px;
+  right:30px;
+  display:none;
+}
+  
 
 

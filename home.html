@@ -5,6 +5,8 @@
        <title>HOME</title>
        <link rel = "stylesheet" type = "text/css"
        href = "styless.css">
+       
+
        <link rel="preconnect" href="https://fonts.googleapis.com">
        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
@@ -44,39 +46,39 @@
         <br>
             <h2 style=" font-size: 22pt; margin-left: 20px;">My Skills:</h2><br>
         <section style="  width: 100%; height: 100%; padding: 2rem 0 10rem 0; display: flex; flex-direction: column; align-items: center;">
-        <div id="progress">
+        <div class="progress">
         <div class="progress-bar">
             <p class="text">
                 C++
-                <span>65</span>%
+                <span></span>%
             </p>
-                <div class="percent2"></div>
+                <div class="percent"></div>
          </div>
          <div class="progress-bar">
             <p class="text">
                 C
-                <span>65</span>%
+                <span></span>%
             </p>
-                <div class="percent2"></div>
+                <div class="percent"></div>
          </div>
          <div class="progress-bar">
             <p class="text">
                 HTML
-                <span>70</span>%
+                <span></span>%
             </p>
-                <div class="percent1"></div>
+                <div class="percent"></div>
          </div>
          <div class="progress-bar">
             <p class="text">
                 CSS
-                <span>70</span>%
+                <span></span>%
             </p>
-                <div class="percent1"></div>
+                <div class="percent"></div>
          </div>
          <div class="progress-bar">
             <p class="text">
                 JavaScript
-                <span>40</span>%
+                <span></span>%
             </p>
                 <div class="percent"></div>
          </div>
@@ -86,9 +88,28 @@
    
         </fieldset> 
     <script>
-      function myFunction() {
-  var popup = document.getElementById("myPopup");
-  popup.classList.toggle("show");
-}
+    
+const progresss = document.querySelector(".progress");
+const progressBarPercents = [80, 82, 90, 85, 70];
+
+window.addEventListener("scroll", () => {
+  mainFn();
+});
+
+const mainFn = () => {
+  
+
+  if (window.pageYOffset + window.innerHeight >= progresss.offsetTop) {
+    document.querySelectorAll(".percent").forEach((el, i) => {
+      el.style.width = `${progressBarPercents[i]}%`;
+      el.previousElementSibling.firstElementChild.textContent =
+        progressBarPercents[i];
+    });
+  }
+};
+
+mainFn();
+
+
     </script>
     </body>
