@@ -32,7 +32,7 @@
         <textarea rows="3" cols="40" name="comment" id="comment6">
           Enter text here...</textarea>
           <input type="button" value="Reset Comment" style="font-size: 15px; float:left;" onclick="document.getElementById('comment6').value=''">
-          <input type="button" value="Comment" style="font-size: 15px; float:right;" onclick="Komentiraj()"><br><br>
+          <input type="button" id="klik" value="Comment" style="font-size: 15px; float:right;" onclick="start11()"><br><br>
           <p style="font-size: 21px;margin-top: 10px; ">All Comments:</p>
           <p><textarea readonly id="komentari"></textarea></p>
          </div>
@@ -45,7 +45,7 @@
         <textarea rows="3" cols="30" name="comment" id="comment4">
           Enter text here...</textarea>
           <input type="button" value="Reset Comment" style="font-size: 15px; float:left;" onclick="document.getElementById('comment4').value=''">
-          <input type="button" value="Comment" style="font-size: 15px; float:right;" onclick="Komentiraj1()"><br><br>
+          <input type="button" id="klik1" value="Comment" style="font-size: 15px; float:right;" onclick="start1()"><br><br>
           <p style="font-size: 21px;margin-top: 10px; ">All Comments:</p>
           <p><textarea readonly id="komentari1"></textarea></p>
       </div>
@@ -58,7 +58,7 @@
         <textarea rows="3" cols="30" name="comment" id="comment3">
           Enter text here...</textarea>
           <input type="button" value="Reset Comment" style="font-size: 15px; float:left;" onclick="document.getElementById('comment3').value=''">
-          <input type="button" value="Comment" style="font-size: 15px; float:right;" onclick="Komentiraj2()"><br><br>
+          <input type="button" id="klik2" value="Comment" style="font-size: 15px; float:right;" onclick="start2()"><br><br>
           <p style="font-size: 21px;margin-top: 10px; ">All Comments:</p>
           <p><textarea readonly id="komentari2"></textarea></p>
       </div>
@@ -71,7 +71,7 @@
         <textarea rows="3" cols="30" name="comment" id="comment2">
           Enter text here...</textarea>
           <input type="button" value="Reset Comment" style="font-size: 15px; float:left;" onclick="document.getElementById('comment2').value=''">
-          <input type="button" value="Comment" style="font-size: 15px; float:right;" onclick="Komentiraj3()"><br><br>
+          <input type="button" id="klik3" value="Comment" style="font-size: 15px; float:right;" onclick="start3()"><br><br>
           <p style="font-size: 21px;margin-top: 10px; ">All Comments:</p>
           <p><textarea readonly id="komentari3"></textarea></p>
       </div>
@@ -84,7 +84,7 @@
         <textarea rows="3" cols="30" name="comment" id="comment1">
           Enter text here...</textarea>
           <input type="button" value="Reset Comment" style="font-size: 15px; float:left;" onclick="document.getElementById('comment1').value=''">
-          <input type="button" value="Comment" style="font-size: 15px; float:right;" onclick="Komentiraj4()"><br><br>
+          <input type="button" id="klik4" value="Comment" style="font-size: 15px; float:right;" onclick="start4()"><br><br>
           <p style="font-size: 21px;margin-top: 10px; ">All Comments:</p>
           <p><textarea readonly id="komentari4"></textarea></p>
     
@@ -97,7 +97,7 @@
         <textarea rows="3" cols="30" name="comment" id="comment">
           Enter text here...</textarea>
           <input type="button" value="Reset Comment" style="font-size: 15px; float:left;"onclick="reset()">
-          <input type="button" value="Comment" style="font-size: 15px; float:right;" onclick="Komentiraj5()"><br><br>
+          <input type="button" id="klik5" value="Comment" style="font-size: 15px; float:right;" onclick="start5()"><br><br>
           <p style="font-size: 21px;margin-top: 10px; ">All Comments:</p>
           <p><textarea readonly id="komentari5"></textarea></p>
       </div>
@@ -246,97 +246,195 @@
               document.getElementById("comment1").value='';
             }
           //komentiraj
-
-
-        function Komentiraj()
-          {
-        var dosegasnikomentari=document.getElementById("komentari").value
-        var tekst=document.getElementById("comment6").value
-        if (dosegasnikomentari!='')
+      </script>
+      </script>
+      
+      <script>
+        function start11()
         {
-          document.getElementById("komentari").innerHTML=dosegasnikomentari+("\n" + tekst)
+          var blogovi11=document.getElementById("komentari").innerHTML=localStorage.getItem("newblog11");
+          var startbutton11 =document.getElementById("klik");
+          klik.addEventListener( "click", insert11, false ); 
         }
-        else
-        {
-          document.getElementById("komentari").innerHTML=dosegasnikomentari+(tekst)
-        }
-       }
-       //
-
-       
-       function Komentiraj1()
-          {
-        var dosegasnikomentari1=document.getElementById("komentari1").value
-        var tekst1=document.getElementById("comment4").value
-        if (dosegasnikomentari1!='')
-        {
-          document.getElementById("komentari1").innerHTML=dosegasnikomentari1+("\n" + tekst1)
-        }
-        else
-        {
-          document.getElementById("komentari1").innerHTML=dosegasnikomentari1+(tekst1)
-        }
-       }
-      //
-
-      function Komentiraj2()
-          {
-        var dosegasnikomentari2=document.getElementById("komentari2").value
-        var tekst2=document.getElementById("comment3").value
-        if (dosegasnikomentari2!='')
-        {
-          document.getElementById("komentari2").innerHTML=dosegasnikomentari2+("\n" + tekst2)
-        }
-        else
-        {
-          document.getElementById("komentari2").innerHTML=dosegasnikomentari2+(tekst2)
-        }
-       }
         
-        //
-       function Komentiraj3()
-          {
-        var dosegasnikomentari3=document.getElementById("komentari3").value
-        var tekst3=document.getElementById("comment2").value
-        if (dosegasnikomentari3!='')
+         window.addEventListener ("load", start11, false);
+        function insert11 ()
         {
-          document.getElementById("komentari3").innerHTML=dosegasnikomentari3+("\n" + tekst3)
-        }
-        else
-        {
-          document.getElementById("komentari3").innerHTML=dosegasnikomentari3+(tekst3)
-        }
-       }
-       //
+         
+          var h11=document.getElementById("comment6").value;
+          
+          var nov11 =  h11 + "\n" ;
+          var siteB11=localStorage.getItem("newblog11");
 
-       function Komentiraj4()
+          if(siteB11==null)
           {
-        var dosegasnikomentari4=document.getElementById("komentari4").value
-        var tekst4=document.getElementById("comment1").value
-        if (dosegasnikomentari4!='')
-        {
-          document.getElementById("komentari4").innerHTML=dosegasnikomentari4+("\n" + tekst4)
+            localStorage.setItem("newblog11", nov11);
+            var doc11 = document.getElementById("komentari").innerHTML=localStorage.getItem("newblog11");
+          }
+          else
+          {
+            siteB11+=nov11;
+            localStorage.setItem("newblog11",siteB11)
+            var doc11=document.getElementById("komentari").innerHTML=localStorage.getItem("newblog11");
+          }
+          
+         
         }
-        else
-        {
-          document.getElementById("komentari4").innerHTML=dosegasnikomentari4+(tekst4)
-        }
-       }
-       //
+            </script>
 
-       function Komentiraj5()
-          {
-        var dosegasnikomentari5=document.getElementById("komentari5").value
-        var tekst5=document.getElementById("comment").value
-        if (dosegasnikomentari5!='')
-        {
-          document.getElementById("komentari5").innerHTML=dosegasnikomentari5+("\n" + tekst5)
-        }
-        else
-        {
-          document.getElementById("komentari5").innerHTML=dosegasnikomentari5+(tekst5)
-        }
-       }
+
+<script>
+  function start1()
+  {
+    var blogovi1=document.getElementById("komentari1").innerHTML=localStorage.getItem("newblog1");
+    var startbutton1 =document.getElementById("klik1");
+    klik1.addEventListener( "click", insert1, false ); 
+  }
+  
+   window.addEventListener ("load", start1, false);
+  function insert1 ()
+  {
+   
+    var h1=document.getElementById("comment4").value;
+    
+    var nov1 =  h1 + "\n";
+    var siteB1=localStorage.getItem("newblog1");
+
+    if(siteB1==null)
+    {
+      localStorage.setItem("newblog1", nov1);
+      var doc1 = document.getElementById("komentari1").innerHTML=localStorage.getItem("newblog1");
+    }
+    else
+    {
+      siteB1+=nov1;
+      localStorage.setItem("newblog1",siteB1)
+      var doc1=document.getElementById("komentari1").innerHTML=localStorage.getItem("newblog1");
+    }
+}
       </script>
 
+<script>
+  function start2()
+  {
+    var blogovi2=document.getElementById("komentari2").innerHTML=localStorage.getItem("newblog2");
+    var startbutton2 =document.getElementById("klik2");
+    klik2.addEventListener( "click", insert2, false ); 
+  }
+  
+   window.addEventListener ("load", start2, false);
+  function insert2 ()
+  {
+   
+    var h2=document.getElementById("comment3").value;
+    
+    var nov2 =  h2 + "\n" ;
+    var siteB2=localStorage.getItem("newblog2");
+
+    if(siteB2==null)
+    {
+      localStorage.setItem("newblog2", nov2);
+      var doc2 = document.getElementById("komentari2").innerHTML=localStorage.getItem("newblog2");
+    }
+    else
+    {
+      siteB2+=nov2;
+      localStorage.setItem("newblog2",siteB2)
+      var doc2=document.getElementById("komentari2").innerHTML=localStorage.getItem("newblog2");
+    }
+}
+      </script>
+
+<script>
+  function start3()
+  {
+    var blogovi3=document.getElementById("komentari3").innerHTML=localStorage.getItem("newblog3");
+    var startbutton3 =document.getElementById("klik3");
+    klik3.addEventListener( "click", insert3, false ); 
+  }
+  
+   window.addEventListener ("load", start3, false);
+  function insert3 ()
+  {
+   
+    var h3=document.getElementById("comment2").value;
+    
+    var nov3 =  h3 + "\n" ;
+    var siteB3=localStorage.getItem("newblog3");
+
+    if(siteB3==null)
+    {
+      localStorage.setItem("newblog3", nov3);
+      var doc3 = document.getElementById("komentari3").innerHTML=localStorage.getItem("newblog3");
+    }
+    else
+    {
+      siteB3+=nov3;
+      localStorage.setItem("newblog3",siteB3)
+      var doc3=document.getElementById("komentari3").innerHTML=localStorage.getItem("newblog3");
+    }
+}
+      </script>
+
+<script>
+  function start4()
+  {
+    var blogovi4=document.getElementById("komentari4").innerHTML=localStorage.getItem("newblog4");
+    var startbutton4 =document.getElementById("klik4");
+    klik4.addEventListener( "click", insert4, false ); 
+  }
+  
+   window.addEventListener ("load", start4, false);
+  function insert4 ()
+  {
+   
+    var h4=document.getElementById("comment1").value;
+    
+    var nov4 =  h4 + "\n" ;
+    var siteB4=localStorage.getItem("newblog4");
+
+    if(siteB4==null)
+    {
+      localStorage.setItem("newblog4", nov4);
+      var doc4 = document.getElementById("komentari4").innerHTML=localStorage.getItem("newblog4");
+    }
+    else
+    {
+      siteB4+=nov4;
+      localStorage.setItem("newblog4",siteB4)
+      var doc4=document.getElementById("komentari4").innerHTML=localStorage.getItem("newblog4");
+    }
+}
+      </script>
+ 
+ <script>
+  function start5()
+  {
+    var blogovi5=document.getElementById("komentari5").innerHTML=localStorage.getItem("newblog5");
+    var startbutton5 =document.getElementById("klik5");
+    klik5.addEventListener( "click", insert5, false ); 
+  }
+  
+   window.addEventListener ("load", start5, false);
+  function insert5 ()
+  {
+   
+    var h5=document.getElementById("comment").value;
+    
+    var nov5 =  h5 + "\n" ;
+    var siteB5=localStorage.getItem("newblog5");
+
+    if(siteB5==null)
+    {
+      localStorage.setItem("newblog5", nov5);
+      var doc5 = document.getElementById("komentari5").innerHTML=localStorage.getItem("newblog5");
+    }
+    else
+    {
+      siteB5+=nov5;
+      localStorage.setItem("newblog5",siteB5)
+      var doc4=document.getElementById("komentari5").innerHTML=localStorage.getItem("newblog5");
+    }
+}
+</script>
       </body>
